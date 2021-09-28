@@ -88,7 +88,7 @@ export const SectionRight = styled.section`
 export const SelectColors = styled.ul`
   display: flex;
   gap: 1.6rem;
-  align-items: center;
+  align-items: flex-start;
 `
 
 const BallColor = styled.button<BallColorProps>`
