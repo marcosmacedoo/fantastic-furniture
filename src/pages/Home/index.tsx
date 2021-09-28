@@ -1,12 +1,13 @@
 import React from 'react'
-import { GlobalStyle } from './styles'
+import { Header } from '../../components/Header'
+import { GlobalStyle } from '../../GlobalStyle'
 
-function Home() {
+function Home(): JSX.Element {
   return (
-    <>
-      <h1>Hello World</h1>
+    <div>
+      <Header />
       <GlobalStyle />
-    </>
+    </div>
   )
 }
 
