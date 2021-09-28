@@ -5,7 +5,12 @@ export const GlobalStyle = createGlobalStyle`
     --white-100: #ffffff;
     --white-200: #F6F6F6;
     --black: #3E3E3E;
-    --blue: #E2F2FF;
+    --blue-100: #E2F2FF;
+    --blue-200: #445C80;
+    --green: #3AA6AC;
+    --red: #CB3738;
+    --gray: #626262;
+    --yellow: #EBD41C;
   }
 
   *, *::after, *::before {
@@ -33,9 +38,14 @@ export const GlobalStyle = createGlobalStyle`
     text-decoration: none;
     color: var(--black);
   }
+
+  button {
+    cursor: pointer;
+    border: 0;
+  }
 `
 
 export const MainContainer = styled.div`
   margin: 0 auto;
-  width: min(85vw, 126.1rem);
+  width: min(90vw, 140rem);
 `

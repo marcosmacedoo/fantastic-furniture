@@ -2,10 +2,14 @@ import styled from 'styled-components'
 
 export const Wrapper = styled.header`
   width: 100%;
-  height: 15rem;
+  height: 12rem;
   background: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
 
   & > div {
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
