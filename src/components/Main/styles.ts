@@ -89,6 +89,7 @@ export const SelectColors = styled.ul`
   display: flex;
   gap: 1.6rem;
   align-items: flex-start;
+  justify-content: center;
 `
 
 const BallColor = styled.button<BallColorProps>`
@@ -116,4 +117,12 @@ export const BallColorYellow = styled(BallColor)`
 
 export const BallColorGray = styled(BallColor)`
   background: var(--gray);
+`
+
+export const BallColorBlack = styled(BallColor)`
+  background: #000;
+`
+
+export const BallColorWhite = styled(BallColor)`
+  background: var(--white-100);
 `
