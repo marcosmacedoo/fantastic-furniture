@@ -47,7 +47,7 @@ export const ActionsButtons = styled.div`
 
 export const ButtonPrimary = styled.button`
   flex: 0 1 15rem;
-  height: 4rem;
+  height: 5rem;
   background: var(--black);
   color: var(--white-100);
   border-radius: 3.2rem;
