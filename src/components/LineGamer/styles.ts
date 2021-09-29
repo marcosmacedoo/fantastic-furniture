@@ -1,26 +1,32 @@
 import styled from 'styled-components'
+import ImgBackgroundLineGamer from '../../assets/background-linha-gamer.svg'
 
 export const Wrapper = styled.section`
   margin-top: 20rem;
-  position: relative;
-  height: 70rem;
-  overflow: hidden;
+  height: 75rem;
+  background-image: url(${ImgBackgroundLineGamer});
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
 
   & > div {
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-  }
-`
+    flex-wrap: wrap;
+    gap: 6rem;
 
-export const BackgroundImage = styled.img`
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  object-fit: cover;
-  z-index: -1;
+    @media (max-width: 860px) {
+      height: auto;
+      padding: 15rem 0;
+    }
+  }
+
+  @media (max-width: 860px) {
+    height: auto;
+    overflow: initial;
+  }
 `
 
 export const Article = styled.article`
@@ -44,6 +50,15 @@ export const Article = styled.article`
     font-weight: 400;
     line-height: 2.8rem;
     color: #ebe6e6;
+
+    @media (max-width: 768px) {
+      font-size: 2rem;
+      line-height: 3.2rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex: 0 0 80%;
   }
 `
 

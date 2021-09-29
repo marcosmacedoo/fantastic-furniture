@@ -1,19 +1,12 @@
 import React from 'react'
 import { MainContainer } from '../../GlobalStyle'
-import {
-  Wrapper,
-  BackgroundImage,
-  Article,
-  SectionSeatGamer,
-  PriceSeatGamer,
-} from './styles'
+import { Wrapper, Article, SectionSeatGamer, PriceSeatGamer } from './styles'
 import {
   SelectColors,
   BallColorRed,
   BallColorBlack,
   BallColorWhite,
 } from '../Main/styles'
-import ImgBackground from '../../assets/background-linha-gamer.svg'
 import ImgSeatGamerBlackAndRed from '../../assets/poltrona-gamer-preta-e-vermelha.svg'
 
 export function LineGamer(): JSX.Element {
@@ -52,10 +45,6 @@ export function LineGamer(): JSX.Element {
           </PriceSeatGamer>
         </SectionSeatGamer>
       </MainContainer>
-      <BackgroundImage
-        src={ImgBackground}
-        alt="Fundo de cor cinza escuro da linha gamer"
-      />
     </Wrapper>
   )
 }
