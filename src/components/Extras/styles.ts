@@ -16,6 +16,14 @@ export const List = styled.ul`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 3.2rem 1.6rem;
+
+  @media (max-width: 1200px) {
+    grid-template-columns: repeat(2, minmax(35rem, 1fr));
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
 `
 
 export const Card = styled.article`
@@ -40,9 +48,18 @@ export const Card = styled.article`
       color: #ebe6e6;
     }
   }
+
+  @media (max-width: 1200px) {
+    height: auto;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0;
+  }
 `
 
 export const ContentCard = styled.div`
+  padding: 3rem 2rem;
   display: flex;
   align-items: center;
   gap: 2.4rem;
@@ -57,16 +74,25 @@ export const ContentCard = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 0.8rem;
   }
 `
 
 export const TitleCard = styled.h3`
   font-size: 2rem;
   font-weight: 500;
+
+  @media (max-width: 768px) {
+    font-size: 2.5rem;
+  }
 `
 
 export const DescriptionCard = styled.p`
   font-size: 1.6rem;
   font-weight: 400;
   color: var(--gray);
+
+  @media (max-width: 768px) {
+    font-size: 2rem;
+  }
 `
