@@ -13,7 +13,7 @@ export const GlobalStyle = createGlobalStyle`
     --yellow: #EBD41C;
   }
 
-  *, *::after, *::before {
+  * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;

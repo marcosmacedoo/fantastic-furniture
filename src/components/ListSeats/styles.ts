@@ -8,12 +8,25 @@ export const Wrapper = styled.section`
 
   & > div {
     display: flex;
-    gap: 10rem;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 5.6rem;
+
+    @media (max-width: 768px) {
+      gap: 6rem;
+      flex-wrap: initial;
+      justify-content: initial;
+      flex-direction: column;
+    }
+  }
+
+  @media (max-width: 475px) {
+    margin-top: 15rem;
   }
 `
 
 export const ContentLeft = styled.div`
-  flex: 1 1 25rem;
+  flex: 0 1 35rem;
   display: flex;
   flex-direction: column;
   gap: 3.2rem;
@@ -29,14 +42,36 @@ export const ContentLeft = styled.div`
     font-weight: 400;
     color: var(--gray);
     line-height: 2.8rem;
+
+    @media (max-width: 768px) {
+      font-size: 2rem;
+    }
+  }
+
+  @media (max-width: 1500px) {
+    flex: 0 1 min(40rem, 100%);
+  }
+
+  @media (max-width: 768px) {
+    width: max(80%, 40rem);
   }
 `
 
 export const CarouselSeats = styled.ul`
   flex: 1;
   display: grid;
-  grid-template-columns: repeat(3, minmax(30rem, 1fr));
+  grid-template-columns: repeat(3, minmax(25rem, 1fr));
   column-gap: 2rem;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 70%;
+    column-gap: initial;
+    row-gap: 2rem;
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
 `
 
 export const ItemCarousel = styled.li`
@@ -60,10 +95,18 @@ export const ItemCarousel = styled.li`
   & > h3 {
     font-size: 1.8rem;
     font-weight: 400;
+
+    @media (max-width: 475px) {
+      font-size: 2rem;
+    }
   }
 
   & > strong {
     font-size: 2.4rem;
+
+    @media (max-width: 475px) {
+      font-size: 3rem;
+    }
   }
 `
 
@@ -75,7 +118,7 @@ export const ButtonArrowRight = styled.button`
   display: grid;
   place-content: center;
   position: absolute;
-  right: 8rem;
+  right: 4rem;
   transition: filter 0.1s linear, transform 0.1s linear;
 
   &:hover {
