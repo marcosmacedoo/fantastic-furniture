@@ -7,14 +7,14 @@ import {
   ItemNavList,
   MenuHamburguer,
 } from './styles'
-import imgLogoDark from '../../assets/logo-dark.svg'
+import imgLogoLight from '../../assets/logo-light.svg'
 import imgIconMenuHamburguer from '../../assets/menu-hamburguer.svg'
 
 export function Header(): JSX.Element {
   return (
     <Wrapper>
       <MainContainer>
-        <ImgLogo src={imgLogoDark} alt="Fantastic Furniture" />
+        <ImgLogo src={imgLogoLight} alt="Fantastic Furniture" />
         <nav>
           <NavList>
             <ItemNavList>

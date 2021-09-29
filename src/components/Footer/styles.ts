@@ -16,11 +16,19 @@ export const Infos = styled.div`
   grid-template-columns: 20rem repeat(3, minmax(20rem, 1fr));
   grid-template-rows: 15rem;
   column-gap: 3.2rem;
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
 `
 
 export const Logo = styled.img`
   height: 100%;
   width: 100%;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `
 
 export const ItemInfos = styled.div`

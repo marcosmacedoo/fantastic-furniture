@@ -2,11 +2,14 @@ import styled from 'styled-components'
 
 export const Wrapper = styled.header`
   width: 100%;
-  height: 12rem;
+  height: 10rem;
   background: transparent;
   position: fixed;
   top: 0;
   left: 0;
+  background: #3e3e3e;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  z-index: 10;
 
   & > div {
     height: 100%;
@@ -37,10 +40,10 @@ export const NavList = styled.ul`
 export const ItemNavList = styled.li`
   font-size: 2rem;
   font-weight: 500;
-  color: var(--black);
 
   & > a {
     transition: opacity 0.3s linear;
+    color: var(--white-100);
   }
 
   & > a:hover {
