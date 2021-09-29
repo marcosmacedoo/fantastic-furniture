@@ -24,6 +24,14 @@ export const ImgLogo = styled.img`
 export const NavList = styled.ul`
   display: flex;
   gap: 4rem;
+
+  @media (max-width: 1024px) {
+    gap: 2.5rem;
+  }
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `
 
 export const ItemNavList = styled.li`
@@ -37,5 +45,28 @@ export const ItemNavList = styled.li`
 
   & > a:hover {
     opacity: 0.7;
+  }
+`
+
+export const MenuHamburguer = styled.button`
+  padding: 1.6rem;
+  display: none;
+  border-radius: 50%;
+  background: var(--white-100);
+  transition: opacity 0.2s linear;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  img {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+
+  @media (max-width: 768px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 `

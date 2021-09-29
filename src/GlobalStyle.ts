@@ -43,6 +43,24 @@ export const GlobalStyle = createGlobalStyle`
     cursor: pointer;
     border: 0;
   }
+
+  @media (max-width: 1024px) {
+    html {
+      font-size: 56.25%;
+    }
+  }
+
+  /* @media (max-width: 768px) {
+    html {
+      font-size: 50%;
+    }
+  }
+
+  @media (max-width: 375px) {
+    html {
+      font-size: 43.75%;
+    }
+  } */
 `
 
 export const MainContainer = styled.div`

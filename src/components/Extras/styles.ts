@@ -35,6 +35,10 @@ export const Card = styled.article`
       color: var(--white-100);
       filter: brightness(5);
     }
+
+    & > div > div > p {
+      color: #ebe6e6;
+    }
   }
 `
 
