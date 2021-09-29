@@ -64,4 +64,5 @@ export const TitleCard = styled.h3`
 export const DescriptionCard = styled.p`
   font-size: 1.6rem;
   font-weight: 400;
+  color: var(--gray);
 `

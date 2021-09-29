@@ -41,8 +41,9 @@ export const Article = styled.article`
 
   & > p {
     font-size: 1.8rem;
-    font-weight: 300;
-    line-height: 2.6rem;
+    font-weight: 400;
+    line-height: 2.8rem;
+    color: #ebe6e6;
   }
 `
 

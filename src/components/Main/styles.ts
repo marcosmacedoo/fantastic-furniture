@@ -32,10 +32,10 @@ export const SectionLeft = styled.section`
   }
 
   & > p {
-    margin-top: 0.8rem;
+    margin-top: 1.6rem;
     font-size: 2rem;
-    font-weight: 300;
-    color: var(--black);
+    font-weight: 400;
+    color: var(--gray);
   }
 `
 

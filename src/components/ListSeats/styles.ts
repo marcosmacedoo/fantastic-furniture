@@ -19,16 +19,16 @@ export const ContentLeft = styled.div`
   gap: 3.2rem;
 
   & > h2 {
-    font-size: 3rem;
+    font-size: 4.8rem;
     font-weight: 700;
     color: var(--black);
   }
 
   & > p {
-    font-size: 1.6rem;
-    font-weight: 300;
-    color: var(--black);
-    line-height: 2.4rem;
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: var(--gray);
+    line-height: 2.8rem;
   }
 `
 
