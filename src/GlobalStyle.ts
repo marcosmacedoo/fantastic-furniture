@@ -28,6 +28,7 @@ export const GlobalStyle = createGlobalStyle`
     background: var(--white-100);
     font-size: 1.6rem;
     color: var(---black);
+    overflow-x: hidden;
   }
 
   ul {
@@ -44,13 +45,13 @@ export const GlobalStyle = createGlobalStyle`
     border: 0;
   }
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1096px) {
     html {
       font-size: 56.25%;
     }
   }
 
-  /* @media (max-width: 768px) {
+  @media (max-width: 768px) {
     html {
       font-size: 50%;
     }
@@ -60,7 +61,7 @@ export const GlobalStyle = createGlobalStyle`
     html {
       font-size: 43.75%;
     }
-  } */
+  }
 `
 
 export const MainContainer = styled.div`
