@@ -4,6 +4,7 @@ import { Main } from '../../components/Main'
 import { ListSeats } from '../../components/ListSeats'
 import { LineGamer } from '../../components/LineGamer'
 import { Extras } from '../../components/Extras'
+import { Footer } from '../../components/Footer'
 import { GlobalStyle } from '../../GlobalStyle'
 
 function Home(): JSX.Element {
@@ -14,6 +15,7 @@ function Home(): JSX.Element {
       <ListSeats />
       <LineGamer />
       <Extras />
+      <Footer />
       <GlobalStyle />
     </div>
   )
