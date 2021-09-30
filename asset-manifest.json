@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.js": "/fantastic-furniture/static/js/main.beb46268.chunk.js",
+    "main.js.map": "/fantastic-furniture/static/js/main.beb46268.chunk.js.map",
+    "runtime-main.js": "/fantastic-furniture/static/js/runtime-main.2b1a9f3e.js",
+    "runtime-main.js.map": "/fantastic-furniture/static/js/runtime-main.2b1a9f3e.js.map",
+    "static/js/2.fb3ad164.chunk.js": "/fantastic-furniture/static/js/2.fb3ad164.chunk.js",
+    "static/js/2.fb3ad164.chunk.js.map": "/fantastic-furniture/static/js/2.fb3ad164.chunk.js.map",
+    "index.html": "/fantastic-furniture/index.html",
+    "static/js/2.fb3ad164.chunk.js.LICENSE.txt": "/fantastic-furniture/static/js/2.fb3ad164.chunk.js.LICENSE.txt",
+    "static/media/background-linha-gamer.b145d9f4.svg": "/fantastic-furniture/static/media/background-linha-gamer.b145d9f4.svg",
+    "static/media/facebook.f2989d68.svg": "/fantastic-furniture/static/media/facebook.f2989d68.svg",
+    "static/media/image-background.9cba3b87.svg": "/fantastic-furniture/static/media/image-background.9cba3b87.svg",
+    "static/media/instagram.e97ea7bd.svg": "/fantastic-furniture/static/media/instagram.e97ea7bd.svg",
+    "static/media/logo-dark.8992257c.svg": "/fantastic-furniture/static/media/logo-dark.8992257c.svg",
+    "static/media/logo-light.e076ec01.svg": "/fantastic-furniture/static/media/logo-light.e076ec01.svg",
+    "static/media/menu-hamburguer.d51a73d8.svg": "/fantastic-furniture/static/media/menu-hamburguer.d51a73d8.svg",
+    "static/media/seta-direita-botao.5166838a.svg": "/fantastic-furniture/static/media/seta-direita-botao.5166838a.svg",
+    "static/media/twitter.4a358f5c.svg": "/fantastic-furniture/static/media/twitter.4a358f5c.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2b1a9f3e.js",
+    "static/js/2.fb3ad164.chunk.js",
+    "static/js/main.beb46268.chunk.js"
+  ]
+}
