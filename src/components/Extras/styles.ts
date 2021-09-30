@@ -55,6 +55,7 @@ export const Card = styled.article`
 
   @media (max-width: 768px) {
     padding: 0;
+    place-content: initial;
   }
 `
 
