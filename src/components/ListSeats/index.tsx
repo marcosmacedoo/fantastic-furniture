@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { MainContainer } from '../../GlobalStyle'
 import {
   ContentLeft,
@@ -7,12 +7,61 @@ import {
   ItemCarousel,
   ButtonArrowRight,
 } from './styles'
-import ImgSeatAzul from '../../assets/carousel-cadeira-azul.svg'
-import ImgSeatWhite from '../../assets/carousel-poltrona-branca.svg'
-import ImgSeatGreen from '../../assets/carousel-poltrona-redonda-verde.svg'
 import ImgArrowRight from '../../assets/seta-direita-botao.svg'
+import { useGlobalContext } from '../../contexts/GlobalContext'
+import { api } from '../../services/api'
 
-export function ListSeats(): JSX.Element {
+type SeatImage = {
+  id: number
+  url: string
+  title: string
+  price: number
+}
+
+export function ListSeats() {
+  const [seatsImagesAll, setSeatsImagesAll] = useState<SeatImage[]>([])
+  const [seatsImagesShow, setSeatsImagesShow] = useState<SeatImage[]>([])
+  const [countersSeatsImagesShow, setCountersSeatsImagesShow] = useState({
+    start: 0,
+    end: 3,
+  })
+  const { loadDataApi } = useGlobalContext()
+
+  function nextSeatsImagesShow() {
+    const amountSeatsImagesShow = 3
+    let start = 0
+    let end = amountSeatsImagesShow
+    let slicedSeatsImagesShow: SeatImage[] = []
+
+    if (countersSeatsImagesShow.end < seatsImagesAll.length) {
+      start += amountSeatsImagesShow
+      end += amountSeatsImagesShow
+    }
+
+    setCountersSeatsImagesShow({
+      start,
+      end,
+    })
+
+    slicedSeatsImagesShow = seatsImagesAll.slice(start, end)
+
+    setSeatsImagesShow(slicedSeatsImagesShow)
+  }
+
+  useEffect(() => {
+    async function loadDataSeatsImages() {
+      const endpoint = '/seats-section-carousel-seats'
+
+      await loadDataApi(api, endpoint, setSeatsImagesAll)
+    }
+
+    loadDataSeatsImages()
+  }, [])
+
+  useEffect(() => {
+    nextSeatsImagesShow()
+  }, [seatsImagesAll])
+
   return (
     <Wrapper>
       <MainContainer>
@@ -25,24 +74,16 @@ export function ListSeats(): JSX.Element {
           </p>
         </ContentLeft>
         <CarouselSeats>
-          <ItemCarousel>
-            <img src={ImgSeatAzul} alt="Poltrona La costé de cor azul escuro" />
-            <h3>Poltrona La costé</h3>
-            <strong>R$999,90</strong>
-          </ItemCarousel>
-          <ItemCarousel>
-            <img src={ImgSeatWhite} alt="Poltrona Salamanca de cor branca" />
-            <h3>Poltrona Salamanca</h3>
-            <strong>R$2499,90</strong>
-          </ItemCarousel>
-          <ItemCarousel>
-            <img src={ImgSeatGreen} alt="Poltrona GiraGira de cor verde" />
-            <h3>Poltrona GiraGira</h3>
-            <strong>R$999,90</strong>
-          </ItemCarousel>
+          {seatsImagesShow.map((seatImage) => (
+            <ItemCarousel key={seatImage.id}>
+              <img src={seatImage.url} alt={seatImage.title} />
+              <h3>{seatImage.title}</h3>
+              <strong>R${seatImage.price}</strong>
+            </ItemCarousel>
+          ))}
         </CarouselSeats>
       </MainContainer>
-      <ButtonArrowRight>
+      <ButtonArrowRight onClick={nextSeatsImagesShow}>
         <img src={ImgArrowRight} alt="Seta para direita" />
       </ButtonArrowRight>
     </Wrapper>
