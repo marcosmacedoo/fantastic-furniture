@@ -1,16 +1,19 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { GlobalContext } from '../../contexts/GlobalContext'
 import { MainContainer } from '../../GlobalStyle'
 import {
   Wrapper,
   ImgLogo,
   NavList,
   ItemNavList,
-  MenuHamburguer,
+  ButtonMenuHamburger,
 } from './styles'
 import imgLogoLight from '../../assets/logo-light.svg'
 import imgIconMenuHamburguer from '../../assets/menu-hamburguer.svg'
 
 export function Header(): JSX.Element {
+  const { openHamburgerMenu } = useContext(GlobalContext)
+
   return (
     <Wrapper>
       <MainContainer>
@@ -34,9 +37,9 @@ export function Header(): JSX.Element {
             </ItemNavList>
           </NavList>
         </nav>
-        <MenuHamburguer>
+        <ButtonMenuHamburger onClick={openHamburgerMenu}>
           <img src={imgIconMenuHamburguer} alt="Menu" />
-        </MenuHamburguer>
+        </ButtonMenuHamburger>
       </MainContainer>
     </Wrapper>
   )

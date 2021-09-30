@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Header } from '../../components/Header'
 import { Main } from '../../components/Main'
 import { ListSeats } from '../../components/ListSeats'
@@ -6,8 +6,12 @@ import { LineGamer } from '../../components/LineGamer'
 import { Extras } from '../../components/Extras'
 import { Footer } from '../../components/Footer'
 import { GlobalStyle } from '../../GlobalStyle'
+import { GlobalContext } from '../../contexts/GlobalContext'
+import { MenuHamburger } from '../../components/MenuHamburger'
 
-function Home(): JSX.Element {
+function Home() {
+  const { isOpenHamburgerMenu } = useContext(GlobalContext)
+
   return (
     <div>
       <Header />
@@ -16,6 +20,7 @@ function Home(): JSX.Element {
       <LineGamer />
       <Extras />
       <Footer />
+      {isOpenHamburgerMenu && <MenuHamburger />}
       <GlobalStyle />
     </div>
   )

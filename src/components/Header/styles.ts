@@ -3,13 +3,12 @@ import styled from 'styled-components'
 export const Wrapper = styled.header`
   width: 100%;
   height: 10rem;
-  background: transparent;
   position: fixed;
   top: 0;
   left: 0;
   background: #3e3e3e;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  z-index: 10;
+  z-index: 2;
 
   & > div {
     height: 100%;
@@ -51,7 +50,7 @@ export const ItemNavList = styled.li`
   }
 `
 
-export const MenuHamburguer = styled.button`
+export const ButtonMenuHamburger = styled.button`
   padding: 1.6rem;
   display: none;
   border-radius: 50%;
