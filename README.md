@@ -1,5 +1,10 @@
 # Fantastic Furniture
 
+---
+[Acesse a aplicação em produção](https://marcosmacedoo.github.io/fantastic-furniture/)
+
+---
+
 ## Instalação
 - `git clone git@github.com:marcosmacedoo/fantastic-furniture.git`
 - `npm install` ou `yarn`
