@@ -1,46 +1,55 @@
-# Getting Started with Create React App
+# Fantastic Furniture
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Instalação
+- `git clone git@github.com:marcosmacedoo/fantastic-furniture.git`
+- `npm install` ou `yarn`
+- `npm run start` ou `yarn start`
+- Acesse `http://localhost:3000/`
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Mudanças na UI
+Fiz algumas pequenas mudanças em prol de melhorar a usabilidade e dar consistência a UI do Fantastic Furniture.
 
-### `yarn start`
+### Melhorando o entendimento para utilizar o Carousel
+Antes
+![](./.github/antes-secao-listagem-poltronas.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Depois
+![](./.github/depois-secao-listagem-poltronas.png)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+> O ícone embaixo do texto de "Porque somos os melhor..." pode causar confusão ao usuário. Pois pode pensar que seja o botão do carousel de poltronas e clicar, no entanto, o verdadeiro botão está a direita da listagem de poltronas. Ele também não possui o destaque necessário para chamar atenção de primeira do usuário.
 
-### `yarn test`
+### Padronizando a de escolha de cores das poltronas
+Antes
+![](./.github/antes-secao-gamer.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Depois
+![](./.github/depois-secao-gamer.png)
 
-### `yarn build`
+> Na seção de início, a escolha de cores para as poltronas está encima da imagem. Então o usuário ao prosseguir na Landing Page esperará que a escolha de cores estará encima da imagem novamente e não ao lodo (como está na foto de antes). E também manter a escolha de cores acima da imagem é uma questão de consistência para a UI.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Imagem da seção de início mencionada acima
+![](./.github/secao-inicial.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Padronizando o título da seção de Extras
+Antes
+![](./.github/antes-secao-extras.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Depois
+![](./.github/depois-secao-extras.png)
 
-### `yarn eject`
+> Em toda a Landing Page os títulos de cada seção são alinhados à esquerda, exceto a seção de Extras. Isso causa uma quebra na consistência. Então o título da seção Extras foi alinhado à esquerda para manter a consistência.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+---
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## MockAPI
+Utilizei o [mockAPI](https://mockapi.io/) para mockar alguns dados.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Url base `https://6154fe692473940017efb04b.mockapi.io/api/`
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Endpoints:
+- `https://6154fe692473940017efb04b.mockapi.io/api/seats-section-gamer`
+- `https://6154fe692473940017efb04b.mockapi.io/api/seats-section-main`
+- `https://6154fe692473940017efb04b.mockapi.io/api/seats-section-carousel-seats`
+- `https://6154fe692473940017efb04b.mockapi.io/api/seats-section-extras`
