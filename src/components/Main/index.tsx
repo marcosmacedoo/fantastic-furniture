@@ -9,14 +9,6 @@ import {
   ButtonSecondary,
   SectionRight,
 } from './styles'
-// import { api } from '../../services/api'
-// import { useGlobalContext } from '../../contexts/GlobalContext'
-// import ImgPoltronaVerde from '../../assets/poltrona-verde.svg'
-
-// type SeatImageData = {
-//   id: number
-//   url: string
-// }
 
 type BallColorData = {
   name: string
@@ -34,20 +26,8 @@ const colorsHex = {
 }
 
 export function Main() {
-  // const [seatsImages, setSeatsImages] = useState<SeatImageData[]>([])
   const [listBallColors, setListBallColors] = useState<BallColorData[]>([])
   const [ballColorActive, setBallColorActive] = useState<BallColorData>()
-  // const { loadDataApi } = useGlobalContext()
-
-  // useEffect(() => {
-  //   async function loadDataSeatsImages() {
-  //     const endpoint = '/seats-section-main'
-
-  //     await loadDataApi(api, endpoint, setSeatsImages)
-  //   }
-
-  //   loadDataSeatsImages()
-  // }, [])
 
   useEffect(() => {
     setListBallColors([

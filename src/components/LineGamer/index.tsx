@@ -1,15 +1,59 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { MainContainer } from '../../GlobalStyle'
 import { Wrapper, Article, SectionSeatGamer, PriceSeatGamer } from './styles'
-import {
-  SelectColors,
-  BallColorRed,
-  BallColorBlack,
-  BallColorWhite,
-} from '../Main/styles'
-import ImgSeatGamerBlackAndRed from '../../assets/poltrona-gamer-preta-e-vermelha.svg'
+import { SelectBallColors } from '../SelectBallColors'
 
-export function LineGamer(): JSX.Element {
+type BallColorData = {
+  name: string
+  hex: string
+  active: boolean
+  urlSeat: string
+}
+
+const colorsHex = {
+  red: '#CB3738',
+  black: '#000',
+  white: '#fff',
+}
+
+export function LineGamer() {
+  const [listBallColors, setListBallColors] = useState<BallColorData[]>([])
+  const [ballColorActive, setBallColorActive] = useState<BallColorData>()
+
+  useEffect(() => {
+    setListBallColors([
+      {
+        name: 'red',
+        hex: colorsHex.red,
+        active: true,
+        urlSeat:
+          'https://raw.githubusercontent.com/marcosmacedoo/fantastic-furniture/e6d98b4ffed12e7dd6fecf4e6473a5736dd74bc3/src/assets/poltrona-gamer-preta-e-vermelha.svg',
+      },
+      {
+        name: 'black',
+        hex: colorsHex.black,
+        active: false,
+        urlSeat:
+          'https://raw.githubusercontent.com/marcosmacedoo/fantastic-furniture/e6d98b4ffed12e7dd6fecf4e6473a5736dd74bc3/src/assets/poltrona-gamer-preta.svg',
+      },
+      {
+        name: 'white',
+        hex: colorsHex.white,
+        active: false,
+        urlSeat:
+          'https://raw.githubusercontent.com/marcosmacedoo/fantastic-furniture/e6d98b4ffed12e7dd6fecf4e6473a5736dd74bc3/src/assets/poltrona-gamer-branca.svg',
+      },
+    ])
+  }, [])
+
+  useEffect(() => {
+    const [filteredBallColorActive] = listBallColors.filter(
+      (ballColor) => ballColor.active
+    )
+
+    setBallColorActive(filteredBallColorActive)
+  }, [listBallColors])
+
   return (
     <Wrapper>
       <MainContainer>
@@ -23,21 +67,11 @@ export function LineGamer(): JSX.Element {
           </p>
         </Article>
         <SectionSeatGamer>
-          <SelectColors>
-            <li>
-              <BallColorRed active />
-            </li>
-            <li>
-              <BallColorBlack />
-            </li>
-            <li>
-              <BallColorWhite />
-            </li>
-          </SelectColors>
-          <img
-            src={ImgSeatGamerBlackAndRed}
-            alt="Poltrona Gamer de cores preto e vermelho"
+          <SelectBallColors
+            listBallColors={listBallColors}
+            setListBallColor={setListBallColors}
           />
+          <img src={ballColorActive?.urlSeat} alt={ballColorActive?.name} />
           <PriceSeatGamer>
             <small>R$2199,90</small>
             <h3>R$1999,90</h3>

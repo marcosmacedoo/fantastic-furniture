@@ -1,10 +1,6 @@
 import styled from 'styled-components'
 import ImgBackground from '../../assets/image-background.svg'
 
-type BallColorProps = {
-  active?: boolean
-}
-
 export const Wrapper = styled.main`
   padding-top: 14rem;
   height: 61.8rem;
@@ -133,6 +129,7 @@ export const SectionRight = styled.section`
     width: 63rem;
     height: 54rem;
     object-fit: contain;
+    animation: show 0.5s linear;
 
     @media (max-width: 550px) {
       margin-top: 5rem;
@@ -144,55 +141,4 @@ export const SectionRight = styled.section`
   @media (max-width: 1096px) {
     margin-top: 6.4rem;
   }
-`
-
-export const SelectColors = styled.ul`
-  display: flex;
-  gap: 1.6rem;
-  align-items: flex-start;
-  justify-content: center;
-
-  @media (max-width: 768px) {
-    gap: 3rem;
-  }
-`
-
-const BallColor = styled.button<BallColorProps>`
-  width: 3.2rem;
-  height: 3.2rem;
-  border-radius: 50%;
-  border: ${(props) => (props.active ? '3px solid var(--black)' : '')};
-
-  @media (max-width: 768px) {
-    height: 4.5rem;
-    width: 4.5rem;
-  }
-`
-
-export const BallColorGreen = styled(BallColor)`
-  background: var(--green);
-`
-
-export const BallColorRed = styled(BallColor)`
-  background: var(--red);
-`
-
-export const BallColorBlueDark = styled(BallColor)`
-  background: var(--blue-200);
-`
-
-export const BallColorYellow = styled(BallColor)`
-  background: var(--yellow);
-`
-
-export const BallColorGray = styled(BallColor)`
-  background: var(--gray);
-`
-
-export const BallColorBlack = styled(BallColor)`
-  background: #000;
-`
-
-export const BallColorWhite = styled(BallColor)`
-  background: var(--white-100);
 `

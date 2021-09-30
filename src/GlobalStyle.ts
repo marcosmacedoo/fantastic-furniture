@@ -62,6 +62,17 @@ export const GlobalStyle = createGlobalStyle`
       font-size: 43.75%;
     }
   }
+
+  @keyframes show {
+    from {
+      opacity: 0.3;
+      transform: scale(0.5);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
 `
 
 export const MainContainer = styled.div`

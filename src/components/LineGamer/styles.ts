@@ -7,7 +7,7 @@ export const Wrapper = styled.section`
   background-image: url(${ImgBackgroundLineGamer});
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: right;
+  background-position: top;
 
   & > div {
     height: 100%;
@@ -26,6 +26,7 @@ export const Wrapper = styled.section`
   @media (max-width: 860px) {
     height: auto;
     overflow: initial;
+    background-position: right;
   }
 `
 
