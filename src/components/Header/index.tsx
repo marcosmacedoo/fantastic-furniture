@@ -1,5 +1,5 @@
-import React, { useContext } from 'react'
-import { GlobalContext } from '../../contexts/GlobalContext'
+import React from 'react'
+import { useGlobalContext } from '../../contexts/GlobalContext'
 import { MainContainer } from '../../GlobalStyle'
 import {
   Wrapper,
@@ -11,8 +11,8 @@ import {
 import imgLogoLight from '../../assets/logo-light.svg'
 import imgIconMenuHamburguer from '../../assets/menu-hamburguer.svg'
 
-export function Header(): JSX.Element {
-  const { openHamburgerMenu } = useContext(GlobalContext)
+export function Header() {
+  const { openHamburgerMenu } = useGlobalContext()
 
   return (
     <Wrapper>

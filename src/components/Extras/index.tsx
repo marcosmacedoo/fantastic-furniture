@@ -10,6 +10,7 @@ import {
   ContentCard,
 } from './styles'
 import { api } from '../../services/api'
+import { useGlobalContext } from '../../contexts/GlobalContext'
 
 type ExtrasItemData = {
   id: number
@@ -20,21 +21,13 @@ type ExtrasItemData = {
 
 export function Extras(): JSX.Element {
   const [extrasItems, setExtrasItems] = useState<ExtrasItemData[]>([])
+  const { loadDataApi } = useGlobalContext()
 
   useEffect(() => {
     async function loadDataExtrasItem() {
-      try {
-        const responseApi = await api.get<ExtrasItemData[]>(
-          '/seats-section-extras'
-        )
-        const { data } = responseApi
+      const endpoint = '/seats-section-extras'
 
-        setExtrasItems(data)
-      } catch {
-        console.error(
-          'Error ao conectar com a API endpoint /seats-section-extras'
-        )
-      }
+      await loadDataApi(api, endpoint, setExtrasItems)
     }
 
     loadDataExtrasItem()
